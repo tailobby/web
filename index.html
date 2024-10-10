@@ -24,30 +24,367 @@
     body {
       margin: 0;
       padding: 0;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
 
-    .container {
-      width: 100vw;
-      height: 100vh;
+    
+
+    @media screen and (max-width: 900px) {
+      .app {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(220deg, #51127f 50%, #883b99);
+      }
     }
 
+    @media screen and (min-width: 901px) and (max-width: 1200px) {
+      .app {
+        width: 60%;
+        height: 100vh;
+        padding-top: 1rem;
+        background: linear-gradient(220deg, #51127f 50%, #883b99);
+      }
+    }
 
+    @media screen and (min-width: 1201px) {
+      .app {
+        width: 40%;
+        height: 100vh;
+        padding-top: 1rem;
+        background: linear-gradient(220deg, #51127f 50%, #883b99);
+      }
+    }
+
+    hr {
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .logo_box {
+      padding-top: 0px;
+      padding-left: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .logo_box img {
+      width: 10%;
+      height: 100%;
+      padding-right: 1rem;
+    }
+    .logo_box p {
+      font-size: large;
+      color: blanchedalmond;
+      font-weight: bold;
+    }
+
+    .icon {
+      width: 1.5rem;
+    }
+
+    .sec_title {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .sec_title span {
+      margin-left: 1rem;
+      font-size: large;
+      font-weight: bold;
+      color: #e0e0e0;
+    }
+
+    .sec_box {
+      margin: 10px;
+    }
+
+    .sec_box hr {
+      margin: 0;
+    }
+
+    .item_node {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 10px;
+
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .item_radius_up {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .item_radius_down {
+      border-radius: 0 0 10px 10px;
+    }
+
+    .item_node_left {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: center;
+      align-items: flex-start;
+    }
+
+    .item_node_left1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: center;
+    }
+    .item_node_left1 p {
+      padding: 0;
+      margin: 0;
+      color: #e0e0e0;
+      font-size: 0.8rem;
+    }
+    .item_node_label {
+      margin-left: 5px;
+    }
+    .item_node_label span{
+      background-color: brown;
+      padding: 2px;
+      color: #e0e0e0;
+      font-size: 0.7rem;
+    }
+
+    .label_primary{
+      background-color: #409eff;
+      color: white;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      padding: 3px;
+      margin-left: 5px;
+    }
+
+    .label_warning{
+      background-color: #e6a23c;
+      color: white;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      padding: 3px;
+      margin-left: 5px;
+    }
+
+    .label_info{
+      background-color: #3e6b27;
+      color: white;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      padding: 3px;
+      margin-left: 5px;
+    }
+
+    .ml {
+      margin-right: 0.3rem;
+    }
+
+    button {
+      background-color: rgba(255,255,255,0.2);
+      color: white;
+      border: 0;
+      border-radius: 10px;
+      margin: 0;
+      padding: 5px 10px 5px 10px;
+
+      min-width: 3rem;
+      min-height: 2rem;
+    }
+
+    .color_primary {
+      background-color: #409eff;
+    }
+
+    .color_link {
+      color: #b292bf;
+    }
   </style>
 
 </head>
 
 <body>
-  <div class="container" >
-    <div>
-      <h1>Hello</h1>
-    </div>
+  <div class="app">
+    <header>
+      <div class="logo_box">
+        <img src="./logo.png"/>
+        <p>v99.win</p>
+      </div>
+    </header>
+    <hr />
+
+    <main>
+      <section>
+        <div class="sec_title">
+          <img class="icon" src="./global.svg" />
+          <span>Ctrl+D Lưu liên kết hiện tại</span>
+        </div>
+
+        <div class="sec_box">
+          <div class="item_node item_radius_up">
+            <div class="item_node_left">
+              <div class="item_node_left1">
+                <p>Chia sẻ liên kết với bạn bè</p>
+                <div class="label_primary">
+                  <span>Gợi ý</span>
+                </div>
+              </div>
+              <div>
+                <span id="id_label_link" class="color_link">https://tailobby.github.io/web/</span>
+              </div>
+            </div>
+            <div>
+              <div>
+                <button id="id_bt_copy" class="color_primary">Sao chép liên kết</button>
+              </div>
+            </div>
+
+          </div>
+
+          <hr />
+
+          <div class="item_node">
+            <div class="item_node_left">
+              <div class="item_node_left1">
+                <p>Trang web chính  V99</p>
+                <div class="label_warning">
+                  <span>Trang web</span>
+                </div>
+              </div>
+              <div>
+                <span id="id_label_game_1" class="color_link">v-99.win</span>
+              </div>
+            </div>
+            <div>
+              <div>
+                <button onclick="enterGame('id_label_game_1')">Bấm để vào</button>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="item_node item_radius_down">
+            <div class="item_node_left">
+              <div class="item_node_left1">
+                <p>Địa chỉ dự phòng V99</p>
+                <!-- <div>
+                  <span>推荐</span>
+                </div> -->
+              </div>
+              <div>
+                <span id="id_label_game_2" class="color_link">v9912.win</span>
+              </div>
+            </div>
+            <div>
+              <div>
+                <button onclick="enterGame('id_label_game_2')">Bấm để vào</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="sec_title">
+          <img class="icon" src="./mobile.svg" />
+          <span>Tải xuống ứng dụng</span>
+        </div>
+
+        <div class="sec_box">
+
+          <div class="item_node item_radius_up">
+            <div class="item_node_left">
+              <div class="item_node_left1">
+                <img class="icon ml" src="./android.svg"/>
+                <p>Địa chỉ tải xuống Android</p>
+                <div class="label_warning">
+                  <span>Trang web</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <button onclick="downloadAndroid('id_label_game_1')"><img class="icon" src="./download.svg"/></button>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="item_node item_radius_down">
+            <div class="item_node_left">
+              <div class="item_node_left1">
+                <img class="icon ml" src="./android.svg"/>
+                <p>Địa chỉ tải xuống Android</p>
+                <div class="label_info">
+                  <span>Dự phòng</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <button onclick="downloadAndroid('id_label_game_2')"><img class="icon" src="./download.svg"/></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </div>
+
+  <script src="./clipboard.min.js" charset="utf-8"></script>
   <script type="text/javascript">
 
-    (function(){
-      console.log("hello")
+    function enterGame(id){
+      let el = document.getElementById(id)
+      let url = el && el.innerText
 
-    })();
+      if(url){
+        window.location.href = `https://${url}`
+      }
+    }
+
+    function downloadAndroid(id){      
+      let el = document.getElementById(id)
+      let url = el && el.innerText
+      
+      if(url){
+        window.location.href = `https://${url}/api/download`
+      }
+    }
+
+    window.onload = function(){
+      const el = document.getElementById("id_label_link")
+      const clipboard = new ClipboardJS('#id_bt_copy', {
+        text: function () {
+          return el.innerText;
+        },
+      });
+
+      clipboard.on("success", e =>{
+
+      })
+
+      clipboard.on("error", e =>{
+
+      })
+      
+    }
     
   </script>
 </body>
