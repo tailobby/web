@@ -215,6 +215,13 @@
     .color_link {
       color: #b292bf;
     }
+
+    .unselectable {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
   </style>
 
 </head>
@@ -231,7 +238,7 @@
 
     <main>
       <section>
-        <div class="sec_title">
+        <div class="sec_title unselectable">
           <img class="icon" src="./global.svg" />
           <span>Ctrl+D Lưu liên kết hiện tại</span>
         </div>
@@ -239,7 +246,7 @@
         <div class="sec_box">
           <div class="item_node item_radius_up">
             <div class="item_node_left">
-              <div class="item_node_left1">
+              <div class="item_node_left1 unselectable">
                 <p>Chia sẻ liên kết với bạn bè</p>
                 <div class="label_primary">
                   <span>Gợi ý</span>
@@ -261,7 +268,7 @@
 
           <div class="item_node">
             <div class="item_node_left">
-              <div class="item_node_left1">
+              <div class="item_node_left1 unselectable">
                 <p>Trang web chính  V99</p>
                 <div class="label_warning">
                   <span>Trang web</span>
@@ -282,7 +289,7 @@
 
           <div class="item_node item_radius_down">
             <div class="item_node_left">
-              <div class="item_node_left1">
+              <div class="item_node_left1 unselectable">
                 <p>Địa chỉ dự phòng V99</p>
                 <!-- <div>
                   <span>推荐</span>
@@ -303,7 +310,7 @@
 
 
       <section>
-        <div class="sec_title">
+        <div class="sec_title unselectable">
           <img class="icon" src="./mobile.svg" />
           <span>Tải xuống ứng dụng</span>
         </div>
@@ -312,7 +319,7 @@
 
           <div class="item_node item_radius_up">
             <div class="item_node_left">
-              <div class="item_node_left1">
+              <div class="item_node_left1 unselectable">
                 <img class="icon ml" src="./android.svg"/>
                 <p>Địa chỉ tải xuống Android</p>
                 <div class="label_warning">
@@ -331,7 +338,7 @@
 
           <div class="item_node item_radius_down">
             <div class="item_node_left">
-              <div class="item_node_left1">
+              <div class="item_node_left1 unselectable">
                 <img class="icon ml" src="./android.svg"/>
                 <p>Địa chỉ tải xuống Android</p>
                 <div class="label_info">
