@@ -438,6 +438,31 @@
     }
     
   </script>
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAN8-Z8K96qmtHLXc5AZsc8KQUYMTGNGh4",
+      authDomain: "v99-win.firebaseapp.com",
+      projectId: "v99-win",
+      storageBucket: "v99-win.appspot.com",
+      messagingSenderId: "614119251998",
+      appId: "1:614119251998:web:8f0ed99655ba5ded164e0f",
+      measurementId: "G-L9X7VXHRN4"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
 </body>
 
 </html>
