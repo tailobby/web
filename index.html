@@ -296,7 +296,7 @@
                 </div> -->
               </div>
               <div>
-                <span id="id_label_game_2" class="color_link">v99wins.me</span>
+                <span id="id_label_game_2" class="color_link">35.185.181.140</span>
               </div>
             </div>
             <div>
@@ -414,7 +414,19 @@
       let url = el && el.innerText
       
       if(url){
-        window.location.href = `https://${url}/api/download`
+        if(/^(\d+\.\d+\.\d+\.\d+)$/.test(url)){
+          const ua = navigator.userAgent;
+          const isAndroid = /android/i.test(ua);
+          if(isAndroid){
+            window.location.href = `https://${url}/api/download`
+          }
+          else{
+            window.location.href = `https://${url}`
+          }
+        }
+        else{
+          window.location.href = `https://${url}/api/download`
+        }
       }
     }
 
